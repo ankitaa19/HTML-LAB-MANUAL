@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country and Capital</title>
+    <style>
+        body {
+            background-color: rgb(230, 168, 224);
+        }
+        .country-label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .capital {
+            font-size: 20px;
+            color: rgb(16, 140, 241);
+            font-weight: bold;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"] + label:before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+        }
+
+        input[type="radio"]:checked + label:before {
+            content: "✔";
+            font-size: 18px;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        input[type="radio"] + label .capital {
+            display: none;
+        }
+
+        input[type="radio"]:checked + label .capital {
+            display: inline-block;
+        }
+        span {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Countries and their capitals</h1>
+    <h3>Select a country to display its capital</h3>
+    <div>
+        <input type="radio" name="country" id="France" value="France" />
+        <label for="France" class="country-label">
+            France
+            <span class="capital">Paris</span>
+        </label>
+    </div>
+    <br />
+    <div>
+        <input type="radio" name="country" id="Japan" value="Japan" />
+        <label for="Japan" class="country-label">
+            Japan
+            <span class="capital">Tokyo</span>
+        </label>
+    </div>
+    <br />
+    <div>
+        <input type="radio" name="country" id="Brazil" value="Brazil" />
+        <label for="Brazil" class="country-label">
+            Brazil
+            <span class="capital">Brasília</span>
+        </label>
+    </div>
+    <br />
+    <div>
+        <input type="radio" name="country" id="SouthAfrica" value="South Africa" />
+        <label for="SouthAfrica" class="country-label">
+            South Africa
+            <span class="capital">Pretoria</span>
+        </label>
+    </div>
+    <br />
+    <div>
+        <input type="radio" name="country" id="China" value="China" />
+        <label for="China" class="country-label">
+            China
+            <span class="capital">Beijing</span>
+        </label>
+    </div>
+</body>
+</html>
